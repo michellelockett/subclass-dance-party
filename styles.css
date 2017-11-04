@@ -3,8 +3,10 @@ body, html{
 }
 body{
   margin: 0px;
+  background-image: url(lib/danceFloor.jpg);
   background-color:#444;
   font-size: 18px;
+  background-repeat: no-repeat;
 }
 body, a:link, a:visited, a:active{
   color: lightblue;
@@ -36,15 +38,41 @@ body, a:link, a:visited, a:active{
   width: 50px;
   height: 50px;
   border: 30px solid;
-  border-color: pink;
   border-radius: 50%;
   position: absolute;
   -webkit-animation-name: example; /* Safari 4.0 - 8.0 */
-  -webkit-animation-duration: 4s; /* Safari 4.0 - 8.0 */
+  -webkit-animation-duration: 2s; /* Safari 4.0 - 8.0 */
   -webkit-animation-iteration-count: infinite; /* Safari 4.0 - 8.0 */
   animation-name: example;
-  animation-duration: 4s;
-  animation-iteration-count: infinite;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+.donut:hover {
+  color: pink;
+  animation-name: bounce;
+}
+
+.pac-man {
+  position: absolute;
+}
+
+@keyframes bounce {
+  0%, 100%, 20%, 50%, 80% {
+    -webkit-transform: translateY(0);
+    -ms-transform:     translateY(0);
+    transform:         translateY(0)
+  }
+  40% {
+    -webkit-transform: translateY(-30px);
+    -ms-transform:     translateY(-30px);
+    transform:         translateY(-30px)
+  }
+  60% {
+    -webkit-transform: translateY(-15px);
+    -ms-transform:     translateY(-15px);
+    transform:         translateY(-15px)
+  }
 }
 
 /* Safari 4.0 - 8.0 */

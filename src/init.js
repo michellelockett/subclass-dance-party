@@ -2,6 +2,8 @@ $(document).ready(function() {
   window.dancers = [];
   window.lined = false;
 
+
+
   $('.lineUpButton').on('click', function(event) {
     console.log(window.dancers);
     if (window.lined) {
@@ -12,11 +14,11 @@ $(document).ready(function() {
     } else {
        window.dancers.forEach(function(dancer) {
         if (dancer instanceof DonutDancer) {
-          dancer.lineUp(10);
+          dancer.lineUp(550);
         } else if (dancer instanceof RainbowDancer) {
-          dancer.lineUp(600);
-        } else if (dancer instanceof BlinkyDancer) {
           dancer.lineUp(null, 50);
+        } else if (dancer instanceof BlinkyDancer) {
+          dancer.lineUp(null, 1150);
         }
       });
       window.lined = true;
@@ -41,15 +43,14 @@ $(document).ready(function() {
 
     // get the maker function for the kind of dancer we're supposed to make
     var dancerMakerFunction = window[dancerMakerFunctionName];
-
+    var y = 1100* Math.random();
+    if (dancerMakerFunctionName === 'PacManDancer') { y = 0 }
 
     // make a dancer with a random position
 
     var dancer = new dancerMakerFunction(
       $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
-      Math.random() * 1000
-    );
+      y, Math.random() * 1000);
     $('body').append(dancer.$node);
     window.dancers.push(dancer);
   });

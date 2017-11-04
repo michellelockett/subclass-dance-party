@@ -23,14 +23,6 @@ describe('donutDancer', function() {
     expect(donutDancer.$node.toggle.called).to.be.false;
   });
 
-  it('should have a step function that makes it change color', function() {
-    var oldColor = donutDancer.$node.css('border-color');
-    sinon.spy(donutDancer, 'changeColor');
-    donutDancer.step();
-    var newColor = donutDancer.$node.css('border-color');
-    expect(oldColor).to.not.equal(newColor);
-  });
-
   describe('dance', function() {
 
     it('should call step at least once per second', function() {

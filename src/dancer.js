@@ -28,7 +28,9 @@ Dancer.prototype.lineUp = function(newTop, newLeft) {
   this.$node.css(newStyleSettings)
 };
 
-
+Dancer.prototype.getCurrentPosition = function() {
+  return [this.$node.css('top'), this.$node.css('left')];
+}
 
 
 
