@@ -30,7 +30,6 @@ PacManDancer.prototype.eat = function() {
       if (dist <= 75) {
         dancer.$node.hide('fast', function(){ dancer.$node.remove(); });
         window.dancers.splice(i, 1);
-        console.log(window.dancers.length);
       }
     }
   });
