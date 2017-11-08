@@ -18,6 +18,14 @@ describe('blinkyDancer', function() {
     expect(blinkyDancer.$node.toggle.called).to.be.true;
   });
 
+  // it('should stay the same color after stepping', function() {
+  //   sinon.spy(blinkyDancer, 'step');
+  //   expect(blinkyDancer.$node.css('borderRadius')).to.equal('red');
+  //   clock.tick(timeBetweenSteps);
+  //   clock.tick(timeBetweenSteps);
+  //   expect(blinkyDancer.$node.css('borderTopColor')).to.equal('red');
+  // });
+
   describe('dance', function() {
 
     it('should call step at least once per second', function() {

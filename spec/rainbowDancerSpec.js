@@ -28,6 +28,7 @@ describe('rainbowDancer', function() {
     sinon.spy(rainbowDancer, 'changeColor');
     rainbowDancer.step();
     var newColor = rainbowDancer.$node.css('border-color');
+    console.log(oldColor, newColor);
     expect(oldColor).to.not.equal(newColor);
   });
 

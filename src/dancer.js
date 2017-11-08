@@ -25,7 +25,15 @@ Dancer.prototype.lineUp = function(newTop, newLeft) {
     top: newTop || this._top,
     left: newLeft || this._left
   }
-  this.$node.css(newStyleSettings)
+  this.$node.animate(newStyleSettings, 'slow');
+};
+
+Dancer.prototype.unLine = function() {
+  var newStyleSettings = {
+    top: this._top,
+    left: this._left
+  }
+  this.$node.animate(newStyleSettings, 'slow');
 };
 
 Dancer.prototype.getCurrentPosition = function() {

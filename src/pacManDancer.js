@@ -12,7 +12,7 @@ PacManDancer.prototype.constructor = PacManDancer;
 PacManDancer.prototype.move = function() {
   this._left += 10;
   this.setPosition();
-  if (this._left > 1100) {
+  if (this._left > 1200) {
     this.$node.remove();
   }
 }
